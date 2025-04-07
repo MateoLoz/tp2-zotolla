@@ -1,7 +1,7 @@
 // backend.js
-const db = require('./database');
+import  guardarTarea  from './database.js'
 
-function validarYGuardarTarea(tarea) {
+export default function validarYGuardarTarea(tarea) {
   if (!tarea || tarea.trim() === '') {
     return "Error: La tarea no puede estar vacía.";
   }
@@ -10,4 +10,4 @@ function validarYGuardarTarea(tarea) {
   return `Tarea guardada: ${tarea}`;
 }
 
-module.exports = { validarYGuardarTarea };
+
